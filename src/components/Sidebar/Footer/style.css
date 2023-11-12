@@ -1,0 +1,30 @@
+.sidebar > .wrapper > footer {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: space-between;
+    visibility: hidden;
+    opacity: 0;
+    gap: 10px;
+    transition: visibility var(--sidebar-show-time), opacity var(--sidebar-show-time);
+}
+
+.sidebar:hover > .wrapper > footer {
+    visibility: visible;
+    opacity: 1;
+}
+
+.sidebar > .wrapper > footer a {
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--secondary-fore-color);
+    letter-spacing: 5px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    transition: color var(--sidebar-show-time);
+}
+
+.sidebar > .wrapper > footer a:hover {
+    color: var(--main-fore-color);
+}

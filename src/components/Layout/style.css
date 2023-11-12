@@ -1,0 +1,15 @@
+:root {
+    --featured-section-height: 700px;
+}
+
+#app {
+    display: grid;
+    grid-template-columns: var(--sidebar-width) 1fr;
+    height: 100vh;
+}
+
+#app > main {
+    overflow: auto;
+    display: grid;
+    grid-template-rows: var(--featured-section-height) 1fr;
+}

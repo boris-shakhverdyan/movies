@@ -1,0 +1,39 @@
+:root {
+    --sidebar-width: 80px;
+    --sidebar-show-time: 0.3s;
+}
+
+.sidebar {
+    position: relative;
+    transition: box-shadow var(--sidebar-show-time);
+    z-index: 1;
+
+    > .wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: var(--sidebar-width);
+        height: 100%;
+        background-color: rgba(5, 5, 5, 0.93);
+        transition: width var(--sidebar-show-time);
+        display: grid;
+        grid-template-rows: 1fr auto;
+        overflow: hidden;
+
+        > .top {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &:hover {
+        position: relative;
+        box-shadow: 200px 0px 100px 77px var(--main-dark-color), 243px 0px 231px 159px var(--main-dark-color);
+
+        > .wrapper {
+            width: 265px;
+            overflow: visible;
+        }
+    }
+}

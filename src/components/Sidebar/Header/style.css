@@ -1,0 +1,29 @@
+.sidebar > .wrapper header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility var(--sidebar-show-time), opacity var(--sidebar-show-time);
+}
+
+.sidebar:hover > .wrapper header {
+    visibility: visible;
+    opacity: 1;
+}
+
+.sidebar > .wrapper header {
+    & img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: var(--main-fore-color);
+    }
+
+    & h3 {
+        color: var(--main-fore-color);
+        letter-spacing: 2px;
+        font-size: 24px;
+    }
+}
